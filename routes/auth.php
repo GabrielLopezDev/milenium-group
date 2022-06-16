@@ -16,11 +16,12 @@ Route::middleware('guest')->group(function () {
 
     Route::post('registro', [RegisteredUserController::class, 'store']);
 
-    Route::get('login', [AuthenticatedSessionController::class, 'create'])
+    Route::get('home', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
 
-    Route::post('login', [AuthenticatedSessionController::class, 'store']);
+    Route::post('home', [AuthenticatedSessionController::class, 'store']);
 
+    /*
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->name('password.request');
 
@@ -32,6 +33,7 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
                 ->name('password.update');
+    */
 });
 
 Route::middleware('auth')->group(function () {
