@@ -18,10 +18,14 @@ class ShowUsers extends Component
     {
         $user->verified = true;
         $user->save();
+
+        $this->emit('alert-accept-user', '¡Usuario verificado exitosamente!');
     }
 
     public function delete(User $user)
     {
         $user->delete();
+
+        $this->emit('alert-delete-user', '¡Usuario eliminado exitosamente!');
     }
 }

@@ -46,6 +46,22 @@
                     'success'
                 )
             })
+
+            Livewire.on('alert-accept-user', function (message) {
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    message,
+                    'success'
+                )
+            })
+
+            Livewire.on('alert-delete-user', function (message) {
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    message,
+                    'success'
+                )
+            })
         </script>
     </body>
 </html>
