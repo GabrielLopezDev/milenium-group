@@ -17,6 +17,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
@@ -36,5 +37,15 @@
         </div>
 
         @livewireScripts
+
+        <script>
+            Livewire.on('alert-create-news', function (message) {
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    message,
+                    'success'
+                )
+            })
+        </script>
     </body>
 </html>
