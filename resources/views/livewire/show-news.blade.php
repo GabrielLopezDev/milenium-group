@@ -41,6 +41,10 @@
                 @endif
             </tbody>
         </table>
+
+        <div class="px-6 py-4">
+            {{ $news->links() }}
+        </div>
     </div>
 
     {{-- Modal --}}
