@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Livewire\Dashboard;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/home');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
 });
-
-
 
 require __DIR__.'/auth.php';
