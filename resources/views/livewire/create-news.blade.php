@@ -9,7 +9,7 @@
         <div class="grid grid-cols-2 grid-rows-2">
 
             <div class="mr-2 mt-4">
-                <x-input-jet type="text" class="w-full" placeholder="Título" wire:model.defer="title"></x-input-jet>
+                <x-input type="text" class="w-full" placeholder="Título" wire:model.defer="title"></x-input>
 
                 <x-input-error for="title" />
             </div>
