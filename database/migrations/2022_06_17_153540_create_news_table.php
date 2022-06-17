@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('lead_news')->comment('Medio de la noticia');
             $table->date('date');
-            $table->string('image_url')->nullable();
+            $table->string('image_url');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
