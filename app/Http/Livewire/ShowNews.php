@@ -4,9 +4,12 @@ namespace App\Http\Livewire;
 
 use App\Models\News;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShowNews extends Component
 {
+    use WithPagination;
+
     public $open = false;
     /** @var News $currently_news description */
     public $currently_news;   
@@ -15,7 +18,7 @@ class ShowNews extends Component
 
     public function render()
     {
-        $news = News::all();
+        $news = News::paginate(5);
 
         return view('livewire.show-news', compact('news'));
     }
