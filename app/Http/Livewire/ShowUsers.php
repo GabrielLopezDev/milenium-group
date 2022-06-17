@@ -4,12 +4,15 @@ namespace App\Http\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShowUsers extends Component
 {
+    use WithPagination;
+
     public function render()
     {
-        $users = User::where('verified', false)->get();
+        $users = User::where('verified', false)->paginate(5);
 
         return view('livewire.show-users', compact('users'));
     }
