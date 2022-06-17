@@ -11,4 +11,10 @@
         @livewire('show-news')
 
     </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 grid-rows-1 bg-white mt-6">
+
+        @livewire('create-news')
+
+    </div>
 </div>

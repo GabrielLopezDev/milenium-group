@@ -9,7 +9,9 @@ class ShowNews extends Component
 {
     public $open = false;
     /** @var News $currently_news description */
-    public $currently_news;    
+    public $currently_news;   
+    
+    protected $listeners = ['render'];
 
     public function render()
     {

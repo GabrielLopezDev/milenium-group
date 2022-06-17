@@ -37,5 +37,15 @@
         </div>
 
         @livewireScripts
+
+        <script>
+            Livewire.on('alert-create-news', function (message) {
+                Swal.fire(
+                    '¡Buen trabajo!',
+                    message,
+                    'success'
+                )
+            })
+        </script>
     </body>
 </html>

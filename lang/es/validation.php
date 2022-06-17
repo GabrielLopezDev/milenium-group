@@ -146,6 +146,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'title' => 'título',
+        'lead_news' => 'medio',
+        'date' => 'fecha',
+        'image' => 'imagen',
+        'today' => 'hoy',
+    ],
 
 ];
