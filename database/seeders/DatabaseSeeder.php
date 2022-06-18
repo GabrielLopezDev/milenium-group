@@ -19,16 +19,5 @@ class DatabaseSeeder extends Seeder
         Storage::makeDirectory('news');
 
         // \App\Models\User::factory(10)->create();
-
-        \App\Models\User::factory()->create([
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'verified' => true,
-        ]);
-
-        \App\Models\User::factory()->create([
-            'name' => 'Test',
-            'email' => 'test@gmail.com',
-        ]);
     }
 }

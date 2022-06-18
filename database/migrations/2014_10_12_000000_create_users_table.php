@@ -1,7 +1,10 @@
 <?php
 
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -23,6 +26,26 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        $users = [
+            [
+                'name'              => 'ADMIN',
+                'email'             => 'admin@gmail.com',
+                'password'          => Hash::make('password'),
+                'verified'          => true,
+            ],
+            [
+                'name'              => 'TEST',
+                'email'             => 'test@gmail.com',
+                'password'          => Hash::make('password'),
+                'verified'          => false,
+            ],
+        ];
+
+        foreach ($users as $user)
+        {
+            User::create($user);
+        }
     }
 
     /**
